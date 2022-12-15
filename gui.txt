@@ -2,10 +2,10 @@
 local window = gui.create_window()
 
 -- set the window title
-window:set_title("My GUI")
+window:set_title("My Roblox GUI")
 
 -- create a label and add it to the window
-local label = gui.create_label("Hello, world!")
+local label = gui.create_label("Hello, Roblox!")
 window:add(label)
 
 -- create a button and add it to the window
@@ -14,3 +14,8 @@ window:add(button)
 
 -- show the window
 window:show()
+
+-- handle button clicks
+button.on_click = function()
+  print("Button was clicked!")
+end
