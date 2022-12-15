@@ -1,0 +1,16 @@
+-- create a new window
+local window = gui.create_window()
+
+-- set the window title
+window:set_title("My GUI")
+
+-- create a label and add it to the window
+local label = gui.create_label("Hello, world!")
+window:add(label)
+
+-- create a button and add it to the window
+local button = gui.create_button("Click me!")
+window:add(button)
+
+-- show the window
+window:show()
