@@ -12,6 +12,10 @@ window:add(label)
 local button = gui.create_button("Click me!")
 window:add(button)
 
+-- create a checkbox and add it to the window
+local checkbox = gui.create_checkbox("Fly")
+window:add(checkbox)
+
 -- show the window
 window:show()
 
@@ -19,6 +23,8 @@ window:show()
 button.on_click = function()
   print("Button was clicked!")
   
-  -- enable flying
-  game.players.local_player.character:set_fly_enabled(true)
+  -- enable flying if the checkbox is checked
+  if checkbox.checked then
+    game.players.local_player.character:set_fly_enabled(true)
+  end
 end
