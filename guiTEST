@@ -1,0 +1,16 @@
+-- create a new GUI
+local gui = Instance.new("ScreenGui")
+
+-- create a frame to hold the options
+local frame = Instance.new("Frame")
+frame.Parent = gui
+frame.Size = UDim2.new(0, 200, 0, 200)
+
+-- create 10 buttons, one for each option
+for i = 1, 10 do
+  local button = Instance.new("TextButton")
+  button.Parent = frame
+  button.Size = UDim2.new(0, 180, 0, 20)
+  button.Position = UDim2.new(0, 10, 0, 20 * i)
+  button.Text = "Option " .. i
+end
